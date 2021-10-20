@@ -110,7 +110,7 @@ class TodoList
   def each
     counter = 0
     until counter == @todos.size 
-      yield(@todos[counter])
+      yield(@todos[counter]) if block_given?
       counter += 1
     end
     self
